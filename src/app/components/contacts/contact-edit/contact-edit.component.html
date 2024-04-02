@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Edit Contact</h2>
+
+  <form (submit)="updateContact()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="contact.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="contact.email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" class="form-control" id="phone" [(ngModel)]="contact.phone" name="phone">
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" class="form-control" id="company" [(ngModel)]="contact.company" name="company">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Update Contact</button>
+    </div>
+  </form>
+</div>

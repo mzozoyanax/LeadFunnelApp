@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Edit Workflow Group</h2>
+  
+    <form (submit)="updateWorkflowGroup()" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="groupId">Group Id:</label>
+        <input type="number" class="form-control" id="groupId" [(ngModel)]="workflowGroup.groupId" name="GroupId" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" class="form-control" id="Name" [(ngModel)]="workflowGroup.name" name="Name">
+      </div>
+
+      <div class="form-group">
+        <label for="Running">Delay:</label>
+        <input type="checkbox" class="form-control" id="Running" [(ngModel)]="workflowGroup.running" name="Running">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Update Workflow Group</button>
+    </form>
+  </div>
+  

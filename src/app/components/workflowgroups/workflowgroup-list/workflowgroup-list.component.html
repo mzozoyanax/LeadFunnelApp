@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>List of Workflow Groups</h2>
+    <a class="btn btn-primary mb-3" href="/workflowgroup/add">Add Workflow Group</a>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Group Id</th>
+          <th>Name</th>
+          <th>Running</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workflowGroup of workflowGroups">
+          <td>{{workflowGroup.groupId}}</td>
+          <td>{{workflowGroup.name}}</td>
+          <td>{{workflowGroup.running}}</td>
+          <td>
+            <button (click)="editWorkflowGroup(workflowGroup)" class="btn btn-success">Edit</button>
+            <button (click)="deleteWorkflowGroup(workflowGroup)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

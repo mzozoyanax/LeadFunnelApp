@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>List of Workflows</h2>
+    <a class="btn btn-primary mb-3" href="/workflow/add">Add Workflow</a>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Group Id</th>
+          <th>Reply</th>
+          <th>Initial Message</th>
+          <th>Follow Message</th>
+          <th>Delay</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workflow of workflows">
+          <td>{{workflow.groupId}}</td>
+          <td>{{workflow.reply}}</td>
+          <td>{{workflow.initialMessage}}</td>
+          <td>{{workflow.followupMessage}}</td>
+          <td>{{workflow.delay}}</td>
+          <td>
+            <button (click)="editWorkflow(workflow)" class="btn btn-success">Edit</button>
+            <button (click)="deleteWorkflow(workflow)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

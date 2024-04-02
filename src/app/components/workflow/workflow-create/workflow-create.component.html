@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Add Workflow</h2>
+  
+    <form (submit)="addWorkflow()" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="groupId">Group Id:</label>
+        <input type="number" class="form-control" id="groupId" [(ngModel)]="newWorkflow.groupId" name="groupId" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Reply">Reply:</label>
+        <input type="text" class="form-control" id="Reply" [(ngModel)]="newWorkflow.reply" name="Reply">
+      </div>
+      
+      <div class="form-group">
+        <label for="InitialMessage">Initial Message:</label>
+        <input type="text" class="form-control" id="InitialMessage" [(ngModel)]="newWorkflow.initialMessage" name="InitialMessage">
+      </div>
+
+      <div class="form-group">
+        <label for="FollowupMessage">Followup Message:</label>
+        <input type="text" class="form-control" id="FollowupMessage" [(ngModel)]="newWorkflow.followupMessage" name="FollowupMessage">
+      </div>
+
+      <div class="form-group">
+        <label for="Delay">Delay:</label>
+        <input type="number" class="form-control" id="Delay" [(ngModel)]="newWorkflow.delay" name="Delay">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Add Workflow</button>
+    </form>
+  </div>
+  
